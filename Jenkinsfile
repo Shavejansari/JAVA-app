@@ -14,7 +14,7 @@ pipeline {
                     if (maven_exists == true) {
                         echo 'Skipping Maven install - already exists'
                     } else {
-                        sh 'sudo apt-get update -y && sudo apt-get upgrade -y'
+                        echo 12345 | sudo -S apt-get update -y
                         sh 'sudo apt install -y wget tree unzip openjdk-11-jdk maven'
                     }
                 }
